@@ -15,7 +15,11 @@ Dự án sử dụng kiến trúc lai giữa **U-Net++** và bộ mã hóa **Eff
 *   **Phân vùng chính xác (Segmentation):** Khoanh vùng ranh giới các ổ nhồi máu não và xuất huyết não ở cấp độ điểm ảnh.
 *   **Bản đồ nhiệt (Explainable AI):** Cung cấp Heatmap xác suất giúp minh bạch hóa tư duy của AI, hiển thị rõ độ tự tin tại từng khu vực tổn thương.
 *   **Tương tác lâm sàng động:** Bác sĩ có thể tự do điều chỉnh *Ngưỡng tự tin (Threshold)* với độ phân giải 0.0001 và *Lọc diện tích (Min Area)* để tùy biến hệ thống theo từng thiết bị chụp CT và bối cảnh y khoa.
-
+## 🗂️ Dữ liệu huấn luyện (Dataset)
+Mô hình được huấn luyện và đánh giá dựa trên **Brain Stroke CT Dataset** (do Ozgur Aslan và cộng sự công bố năm 2021). 
+* Tập dữ liệu bao gồm hàng ngàn lát cắt CT sọ não đa cửa sổ (Multi-window) với 3 phân lớp: Bình thường (Normal), Nhồi máu (Ischemia), và Xuất huyết (Bleeding).
+* **Nguồn tải dữ liệu:** [Kaggle - Brain Stroke CT Dataset]([https://www.kaggle.com/](https://www.kaggle.com/datasets/ozguraslank/brain-stroke-ct-dataset))
+* **Hướng dẫn huấn luyện lại:** Nếu muốn tự huấn luyện mô hình (Retrain), bạn vui lòng tải tập dữ liệu từ link trên, giải nén và đặt vào thư mục gốc của dự án, sau đó chạy tuần tự các cell trong file `final_segmentation.ipynb`.
 ## 🛠️ Công nghệ sử dụng
 *   **Framework Học sâu:** PyTorch, Segmentation Models PyTorch (smp)
 *   **Xử lý thị giác máy tính:** OpenCV, Albumentations
